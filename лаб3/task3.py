@@ -1,12 +1,13 @@
 # TODO  Напишите функцию count_letters
 def count_letters(input_str):
     dictionary={}
-    for symb in input_str:
-        if symb.lower().isalpha():
-            if not dictionary.get(symb.lower()):
-                dictionary[symb.lower()]=1
+    lower_text=input_str.lower()
+    for symb in lower_text:
+        if symb.isalpha():
+            if not dictionary.get(symb):
+                dictionary[symb]=1
             else:
-                dictionary[symb.lower()]+=1
+                dictionary[symb]+=1
     return dictionary
 
 # TODO Напишите функцию calculate_frequency
